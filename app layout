@@ -1,0 +1,21 @@
+// app/layout.tsx
+import './globals.css';
+import { Toaster } from 'sonner';
+
+export const metadata = {
+  title: 'ClauseWise',
+  description: 'Legal document analyzer',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+        <Toaster />
+        <main className="min-h-screen">
+          {children}
+        </main>
+      </body>
+    </html>
+  );
+}
